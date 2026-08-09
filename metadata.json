@@ -1,0 +1,6 @@
+{
+  "name": "Lens & Canvas - Premium Digital Art & Photography Marketplace",
+  "description": "High-end photography and digital art marketplace with $1,500 lifetime seller membership via BTC or Gift Cards, secure watermarking, and signed downloads.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
