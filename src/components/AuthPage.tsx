@@ -23,6 +23,8 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onLoginSuccess, promptMessag
 
   // UI State
   const [showPassword, setShowPassword] = useState(false);
+  const [showSignupPassword, setShowSignupPassword] = useState(false);
+  const [showSignupConfirmPassword, setShowSignupConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
@@ -349,28 +351,46 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onLoginSuccess, promptMessag
                   <label className="text-xs font-semibold text-zinc-300 uppercase tracking-widest block mb-1.5 font-mono">
                     Password
                   </label>
-                  <input
-                    type="password"
-                    required
-                    placeholder="••••••••"
-                    value={signupPassword}
-                    onChange={(e) => setSignupPassword(e.target.value)}
-                    className="w-full bg-[#121216] border border-zinc-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-[#FF6321]"
-                  />
+                  <div className="relative">
+                    <input
+                      type={showSignupPassword ? 'text' : 'password'}
+                      required
+                      placeholder="••••••••"
+                      value={signupPassword}
+                      onChange={(e) => setSignupPassword(e.target.value)}
+                      className="w-full bg-[#121216] border border-zinc-800 rounded-xl px-3.5 pr-9 py-2.5 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-[#FF6321]"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowSignupPassword(!showSignupPassword)}
+                      className="absolute right-3 top-2.5 text-zinc-500 hover:text-zinc-300"
+                    >
+                      {showSignupPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                    </button>
+                  </div>
                 </div>
 
                 <div>
                   <label className="text-xs font-semibold text-zinc-300 uppercase tracking-widest block mb-1.5 font-mono">
                     Confirm Password
                   </label>
-                  <input
-                    type="password"
-                    required
-                    placeholder="••••••••"
-                    value={signupConfirmPassword}
-                    onChange={(e) => setSignupConfirmPassword(e.target.value)}
-                    className="w-full bg-[#121216] border border-zinc-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-[#FF6321]"
-                  />
+                  <div className="relative">
+                    <input
+                      type={showSignupConfirmPassword ? 'text' : 'password'}
+                      required
+                      placeholder="••••••••"
+                      value={signupConfirmPassword}
+                      onChange={(e) => setSignupConfirmPassword(e.target.value)}
+                      className="w-full bg-[#121216] border border-zinc-800 rounded-xl px-3.5 pr-9 py-2.5 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-[#FF6321]"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowSignupConfirmPassword(!showSignupConfirmPassword)}
+                      className="absolute right-3 top-2.5 text-zinc-500 hover:text-zinc-300"
+                    >
+                      {showSignupConfirmPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                    </button>
+                  </div>
                 </div>
               </div>
 
