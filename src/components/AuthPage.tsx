@@ -254,7 +254,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onLoginSuccess, promptMessag
                     onChange={(e) => setLoginEmail(e.target.value)}
                     className="w-full bg-[#121216] border border-zinc-800 rounded-xl pl-9 pr-3.5 py-2.5 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-[#FF6321]"
                   />
-                  <Mail className="w-4 h-4 text-zinc-500 absolute left-3 top-3" />
+                  <Mail className="w-4 h-4 text-zinc-500 absolute left-3 top-1/2 -translate-y-1/2" />
                 </div>
               </div>
 
@@ -271,11 +271,11 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onLoginSuccess, promptMessag
                     onChange={(e) => setLoginPassword(e.target.value)}
                     className="w-full bg-[#121216] border border-zinc-800 rounded-xl pl-9 pr-9 py-2.5 text-xs text-white placeholder-zinc-600 focus:outline-none focus:border-[#FF6321]"
                   />
-                  <Lock className="w-4 h-4 text-zinc-500 absolute left-3 top-3" />
+                  <Lock className="w-4 h-4 text-zinc-500 absolute left-3 top-1/2 -translate-y-1/2" />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-2.5 text-zinc-500 hover:text-zinc-300"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-zinc-300"
                   >
                     {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                   </button>
@@ -363,7 +363,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onLoginSuccess, promptMessag
                     <button
                       type="button"
                       onClick={() => setShowSignupPassword(!showSignupPassword)}
-                      className="absolute right-3 top-2.5 text-zinc-500 hover:text-zinc-300"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-zinc-300"
                     >
                       {showSignupPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                     </button>
@@ -386,7 +386,7 @@ export const AuthPage: React.FC<AuthPageProps> = ({ onLoginSuccess, promptMessag
                     <button
                       type="button"
                       onClick={() => setShowSignupConfirmPassword(!showSignupConfirmPassword)}
-                      className="absolute right-3 top-2.5 text-zinc-500 hover:text-zinc-300"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-zinc-300"
                     >
                       {showSignupConfirmPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                     </button>
